@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://cabinet.psy-monnet-foujols.com/sitemap.xml

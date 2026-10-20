@@ -1,0 +1,60 @@
+/* Compléments au CSS Oxygen d'origine : bandeau cookies et visionneuse de galerie
+   (remplacent les styles que les scripts jQuery appliquaient à la volée). */
+
+/* ---- Bandeau cookies (réglages du plugin « Cookie Law Info » d'origine) ---- */
+#cookie-law-info-bar {
+	background-color: #fff;
+	color: #333;
+	font-family: inherit;
+	bottom: 0;
+	position: fixed;
+}
+#cookie-law-info-bar.is-visible { display: block; }
+#cookie-law-info-bar .cli_settings_button { color: #333; background-color: #dedfe0; cursor: pointer; }
+#cookie-law-info-bar .cli_settings_button:hover { background-color: #b2b2b3; }
+#cookie-law-info-bar .wt-cli-accept-all-btn { color: #fff; background-color: #61a229; cursor: pointer; }
+#cookie-law-info-bar .wt-cli-accept-all-btn:hover { background-color: #4e8221; }
+.cli-modal .cli-tab-content { display: none; }
+.cli-modal .cli-tab-header { cursor: pointer; }
+.cli-modal .cli-privacy-readmore { cursor: pointer; }
+
+/* ---- Visionneuse de la galerie (remplace PhotoSwipe) ---- */
+.mf-lightbox {
+	position: fixed;
+	inset: 0;
+	z-index: 100000;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, .9);
+}
+.mf-lightbox.is-open { display: flex; }
+.mf-lightbox img {
+	max-width: 92vw;
+	max-height: 88vh;
+	object-fit: contain;
+	box-shadow: 0 0 30px rgba(0, 0, 0, .5);
+}
+.mf-lightbox button {
+	position: absolute;
+	border: 0;
+	background: transparent;
+	color: #fff;
+	font: 300 40px/1 Montserrat, sans-serif;
+	padding: 16px;
+	cursor: pointer;
+	opacity: .75;
+}
+.mf-lightbox button:hover, .mf-lightbox button:focus-visible { opacity: 1; }
+.mf-lightbox .mf-lb-close { top: 0; right: 0; }
+.mf-lightbox .mf-lb-prev { left: 0; top: 50%; transform: translateY(-50%); }
+.mf-lightbox .mf-lb-next { right: 0; top: 50%; transform: translateY(-50%); }
+.mf-lightbox .mf-lb-count {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 20px;
+	color: #fff;
+	font: 400 13px/1 Montserrat, sans-serif;
+	opacity: .75;
+}
